@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+E:/CODE/LeetCode/main.c
+malloc.h
+-
+string.h
+E:/CODE/LeetCode/string.h
+stdio.h
+E:/CODE/LeetCode/stdio.h
+
