@@ -7,6 +7,10 @@ using namespace std;
             return 0;
         int state = 0, curLen = 1, pre = A[0], ans = 0;
         for(int i = 1; i < A.size(); i++){
+            if(pre == A[i]){
+                state = 0;
+                curLen = 0;
+            }
             if(state == 0){
                 if(A[i] > pre){
                     state = 1;
@@ -16,14 +20,11 @@ using namespace std;
             }else if(state == 1){
                 if(A[i] < pre){
                     state = 2;
-                }else if(A[i] == pre){
-                    state = 0;
-                    curLen = 0;
                 }
             }else{
-                if(A[i] >= pre){
-                    state = 0;
-                    curLen = 0;
+                if(A[i] > pre){
+                    state = 1;
+                    curLen = 1;
                 }
             }
             pre = A[i];
