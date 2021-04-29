@@ -26,8 +26,8 @@ func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
 		return findMedianSortedArrays(nums2, nums1)
 	}
 	mid1 := int(n1 / 2)
-	mid2 := int((n1+n2)/2 - mid1)
-	for mid1 > 0 && mid2 >= 0 && mid2 < n2 && nums1[mid1-1] > nums2[mid2] {
+	mid2 := int((n1+n2)/2 - mid1)                                           //初始化出错
+	for mid1 > 0 && mid2 >= 0 && mid2 < n2 && nums1[mid1-1] > nums2[mid2] { // <= 判断越界(空数组)
 		mid1--
 		mid2 = (n1+n2)/2 - mid1
 	}
@@ -35,9 +35,8 @@ func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
 		mid2--
 		mid1 = (n1+n2)/2 - mid2
 	}
-
 	ans := .0
-	t1, t2, t3, t4 := 0, 1000000, 0, 1000000
+	t1, t2, t3, t4 := 0, 1000000, 0, 1000000 //最大值看错了
 	if mid1 > 0 {
 		t1 = nums1[mid1-1]
 	}
