@@ -27,7 +27,7 @@ func combinationSum(candidates []int, target int) [][]int {
 	return ans
 }
 
-func main() {
+func main3() {
 	candidates := []int{2, 3, 5}
 	target := 8
 	a := combinationSum(candidates, target)
