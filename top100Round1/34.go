@@ -66,7 +66,7 @@ func searchRange(nums []int, target int) []int {
 }
 
 //测试改成main
-func main1() {
+func main5() {
 	nums := []int{2, 2}
 	target := 2
 	ans := searchRange(nums, target)
