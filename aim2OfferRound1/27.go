@@ -15,7 +15,7 @@ func removeElement(nums []int, val int) int {
 	return len(nums) - count
 }
 
-func main(){
+func main1(){
 	nums := []int{0,1,2,2,3,0,4,2}
 	val := 2
 	a := removeElement(nums, val)
