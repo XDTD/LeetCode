@@ -5,6 +5,7 @@ package main
 // 第二次错误是边界值应该是nums[i]最大值平方而不是绝对值
 // l>=0而不是 l > 0
 // 先二分法找到分界点，然后双指针分别左右跑
+// 可以从大到小，不用二分找中间
 
 func sortedSquares(nums []int) []int {
     ans := make([]int, len(nums))
